@@ -460,6 +460,19 @@ ul {
     pointer-events: auto;
 }
 
+.contact .map-container #googleMap a[href^="http://maps.google.com/maps"],
+.contact .map-container #googleMap a[href^="https://maps.google.com/maps"] {
+    display: none !important;
+}
+
+.contact .map-container #googleMap .gm-style-cc {
+    display: none !important;
+}
+
+.contact .map-container #googleMap .gmnoprint div {
+    background: none !important;
+}
+
 
 .contact input:not([type="submit"]),
 .contact textarea {
