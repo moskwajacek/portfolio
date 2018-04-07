@@ -1,15 +1,17 @@
-$(document).on('ready', function pageLoad() {
-    window.addEventListener('scroll', scrollBack, false);
-    window.addEventListener('load', scrollBack, false);
-    window.addEventListener('load', smoothScroll, false);
-    window.addEventListener('load', initMap, false);
-    window.addEventListener('load', mapClick, false);
-    window.addEventListener('load', mobileDevice, false);
-    window.addEventListener('load', autoSlide, false);
-    window.addEventListener('load', popUp, false);
+$(document).ready(function () {
+    scrollBack();
+    smoothScroll();
+    mobileDevice();
+    autoShowSlides();
+    popUp();
+    initMap();
+    mapClick();
+    
 });
 
 const scrollBack = function () {
+    window.addEventListener('scroll', scrollBack, false);
+    window.addEventListener('load', scrollBack, false);
 
     for (let i = 0; i < $('.panel').length; i++) {
         if ($('.panel').eq(i).offset().top < ($(document).scrollTop()) + ($(window).height()) / 5) {
@@ -44,7 +46,7 @@ const smoothScroll = function () {
 };
 //    $('.panel').eq(0).find('.panelContent').addClass('panel_Content--active');
 
-initMap = function initMap() {
+function initMap() {
     const mapProperties = {
         center: {
             lat: 50.061293,
@@ -255,18 +257,18 @@ initMap = function initMap() {
     marker.addListener('click', toggleBounce);
 };
 
-const mapClick = function mapClick() {
+function mapClick() {
     $('.map-container')
         .click(function () {
             $(this).find('#googleMap').addClass('clicked');
         })
         .mouseleave(function () {
-            $(this).find('#googleMao').removeClass('clicked');
+            $(this).find('#googleMap').removeClass('clicked');
         });
 
 }
 
-const mobileDevice = function hover() {
+const mobileDevice = function mobileDevice() {
     $('*').on('touchstart', function () {
         $(this).trigger('hover');
     }).on('touchend', function () {
@@ -317,7 +319,7 @@ function showSlides(n) {
 }
 
 
-const autoSlide = function autoShowSlides() {
+const autoShowSlides = function autoShowSlides() {
 
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";

@@ -44,12 +44,19 @@
         height: 120vh;
         margin: 0;
         padding: 0;
+        margin-left: 3vw;
     }
     .skills .skills-item {
         width: 40vw;
         height: 20vh;
         margin: 0;
         padding: 0;
+    }
+
+    .skills .skill .showItem {
+        display: block;
+        top: -135%;
+        left: 51.5%;
     }
 }
 
@@ -80,6 +87,45 @@
         margin: 0;
         padding: 0;
 
+    }
+
+}
+
+@media (max-height: 350px) {
+    .skills .skills-container {
+        height: 180vh;
+    }
+
+    .skills .skill .showItem {
+        display: block;
+        top: -280%;
+        left: 51.5%;
+    }
+
+}
+
+@media (max-height: 400px) {
+    .skills .skills-container {
+        height: 140vh;
+    }
+
+    .skills .skill .showItem {
+        display: block;
+        top: -240%;
+        left: 51.5%;
+    }
+
+}
+
+@media (max-height: 450px) {
+    .skills .skills-container {
+        height: 120vh;
+    }
+
+    .skills .skill .showItem {
+        display: block;
+        top: -220%;
+        left: 51.5%;
     }
 
 }
