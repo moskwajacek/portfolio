@@ -285,7 +285,6 @@ ul {
     color: #fff;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 99%;
 }
@@ -308,7 +307,6 @@ ul {
 .portfolio .portfolio-item-content a {
     color: #fff;
     font-size: 1.6em;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     border: solid;
     border-radius: 5px;
@@ -324,12 +322,10 @@ ul {
 }
 
 .portfolio .portfolio-item-content i {
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
 .portfolio .portfolio-item-content i:hover {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
 
@@ -545,7 +541,6 @@ ul {
     text-align: center;
     line-height: 50px;
     margin-right: 10px;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
 
